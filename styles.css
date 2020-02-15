@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Titillium+Web:400,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.75fr 1fr;
+    grid-template-rows: 1fr 6fr 3fr 1.5fr;
+    grid-template-areas: 
+        'main   header'
+        'main   image'
+        'extra  image'
+        'footer image';
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    grid-area: header;
+    background: #d64379;
+}
+
+header ul {
+    display: flex;
+    font-family: 'Titillium Web', 'Montserrat', sans-serif;
+    list-style: none;
+    width: 100%;
+}
+
+header ul li {
+    margin: auto 1rem auto 3rem;
+}
+
+header ul li:nth-child(2) {
+    margin-right: auto;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.shop-list-item a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+header img {
+    width: 70px;
+    height: auto;
+    margin: 0 .25rem 0 auto;
+}
+
+main {
+    grid-area: main;
+    background: #9c1de7;
+}
+
+.headline-container {
+    display: flex;
+    margin: 1.25rem 4rem 1rem 4rem;
+}
+
+
+.headline-container h1 {
+    color: #faee1c;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    margin: auto 0 0 0;
+    text-shadow: 0px 0px 10px rgb(94, 94, 94);
+}
+
+.maintext-container {
+    margin: 2rem 4rem 1rem 4rem;
+    padding-top: 3rem;
+}
+
+.maintext-container h1 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    width: 14rem;
+}
+
+.maintext-container p {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    margin: 2rem 0 10% 0;
+}
+
+.image {
+    grid-area: image;
+    background: url(./images/donut1.jpg) no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.extra {
+    grid-area: extra;
+    background: #671199;
+}
+
+.google-maps {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.extra:hover + .google-maps {
+    opacity: 1;
+    visibility: visible;
+}
+
+footer {
+    grid-area: footer;
+    background: #1f1f1f;
+    color: white;
+    font-family: 'Titillium Web', 'Montserrat', sans-serif;
+}
+
+.footer-contact-container {
+    display: flex;
+    align-items: center;
+    margin-top: .75rem;
+    padding: 1rem 0 .5rem 0;
+}
+
+.footer-contact-text-container {
+    margin: -.5rem auto 0 4rem;
+    line-height: 1.25rem;
+}
+
+.footer-contact-text-container h3 {
+    text-align: center;
+}
+
+.footer-contact-container a {
+    margin-right: 2rem;
+}
+
+.footer-contact-container a:last-child {
+    margin-right: 4rem;
+}
+
+.footer-contact-container a img {
+    width: 40px;
+    height: auto;
+}
+
+.footer-copyright-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-copyright-container .divider {
+    height: .05rem;
+    width: 8rem;
+    background: white;
+}
+
+.footer-copyright-container p {
+    text-align: center;
+}
