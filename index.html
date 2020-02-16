@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="./images/donutLogo.svg">
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
     <title>Donut Realm</title>
 </head>
+
 <body>
-    <div class="grid-container">
+    <div class="grid-container" id="grid-container">
         <header>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#" id="About">About</a></li>
                 <li class="shop-list-item"><a href="#">Shop Now</a></li>
             </ul>
             <img src="./images/donutLogo.svg">
@@ -24,15 +27,23 @@
             </div>
             <div class="maintext-container">
                 <h1>The Best Donuts</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ut explicabo ipsam nulla, excepturi, quo ex architecto obcaecati assumenda odit similique commodi accusantium possimus error inventore et nihil ab perferendis fugit id aut. Aspernatur voluptates qui odit voluptatibus in quibusdam porro nulla possimus voluptate veritatis!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque ut explicabo ipsam nulla, excepturi,
+                    quo ex architecto obcaecati assumenda odit similique commodi accusantium possimus error inventore et
+                    nihil ab perferendis fugit id aut. Aspernatur voluptates qui odit voluptatibus in quibusdam porro
+                    nulla possimus voluptate veritatis!</p>
             </div>
         </main>
         <section class="image">
         </section>
-        <section class="extra">
-            <div class="google-maps">
-                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Pee%20Pee%20Township%2C%20OH%2C%20USA&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <section class="extra" id="extraSection">
+            <div class="extra-text-container" id="extraTextSection">
+                <div class="divider"></div>
+                <h1>Located <span>Here!</span></h1>
+                <div class="divider"></div>
             </div>
+            <iframe id="googleMaps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21564.045177497228!2d-122.02612537463355!3d47.4995430544222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549065ac62cb0b95%3A0x3432ea90a57ee8cb!2sPoo%20Poo%20Point!5e0!3m2!1sen!2sde!4v1581839734306!5m2!1sen!2sde"
+                width="95%" height="90%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
         </section>
         <footer>
             <div class="footer-contact-container">
@@ -40,14 +51,59 @@
                     <h3>Contact:</h3>
                     <p>hi@DonutRealm.com</p>
                 </div>
-                <a href="https://tumblr.com"><img src="./images/tumblr.svg"></a>
-                <a href="https://www.instagram.com"><img src="./images/instagram.svg"></a>
-                <a href="https://www.twitter.com"><img src="./images/twitter.svg"></a>
+                <p>Copyright &COPY; 2020</p>
+                <div class="footer-contact-image-container">
+                    <a href="https://tumblr.com"><img src="./images/tumblr.svg"></a>
+                    <a href="https://www.instagram.com"><img src="./images/instagram.svg"></a>
+                    <a href="https://www.twitter.com"><img src="./images/twitter.svg"></a>
+                </div>
             </div>
             <div class="footer-copyright-container">
+            </div>
+        </footer>
+    </div>
+    <div class="grid-container-2" id="grid-container-2">
+        <header>
+            <ul>
+                <li><a href="#" id="Home">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="shop-list-item"><a href="#">Shop Now</a></li>
+            </ul>
+            <img src="./images/donutLogo.svg">
+        </header>
+        <main>
+            <div class="headline-container">
+                <h1>Donut Realm</h1>
+            </div>
+            <div class="maintext-container">
+                <h1>Dedicated, Hard-Working, Optimistic</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quis aliquid eaque dignissimos
+                    eius? Doloribus cumque quos quibusdam recusandae ducimus explicabo corporis sint, modi omnis ut
+                    culpa ipsam, laboriosam ab corrupti assumenda similique et laborum commodi. Laboriosam vel odio quas
+                    culpa animi consectetur error voluptatibus, ad enim omnis, rerum voluptates necessitatibus optio
+                    architecto magnam. Voluptatibus odit saepe omnis, inventore laudantium eum at voluptas ex cupiditate
+                    temporibus. Perspiciatis modi adipisci magni.</p>
+            </div>
+        </main>
+        <section class="image2">
+        </section>
+        <footer>
+            <div class="footer-contact-container">
+                <div class="footer-contact-text-container">
+                    <h3>Contact:</h3>
+                    <p>hi@DonutRealm.com</p>
+                </div>
                 <p>Copyright &COPY; 2020</p>
+                <div class="footer-contact-image-container">
+                    <a href="https://tumblr.com"><img src="./images/tumblr.svg"></a>
+                    <a href="https://www.instagram.com"><img src="./images/instagram.svg"></a>
+                    <a href="https://www.twitter.com"><img src="./images/twitter.svg"></a>
+                </div>
+            </div>
+            <div class="footer-copyright-container">
             </div>
         </footer>
     </div>
 </body>
+
 </html>

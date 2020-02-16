@@ -1,176 +1,257 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Titillium+Web:400,700&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
-    height: 100vh;
+	height: 100vh;
 }
 
+/* Home page styles:  */
+
 .grid-container {
-    display: grid;
-    grid-template-columns: 1.75fr 1fr;
-    grid-template-rows: 1fr 6fr 3fr 1.5fr;
-    grid-template-areas: 
-        'main   header'
-        'main   image'
-        'extra  image'
-        'footer image';
-    height: 100vh;
+	display: grid;
+	opacity: 1;
+	grid-template-columns: 1.75fr 1fr;
+	grid-template-rows: 1fr 6fr 3fr 1fr;
+	grid-template-areas:
+		'main   header'
+		'main   image'
+		'extra  image'
+		'footer image';
+	height: 100vh;
+
+	transition: opacity 0.5s linear;
 }
 
 header {
-    display: flex;
-    grid-area: header;
-    background: #d64379;
+	display: flex;
+	grid-area: header;
+	background: #d64379;
 }
 
 header ul {
-    display: flex;
-    font-family: 'Titillium Web', 'Montserrat', sans-serif;
-    list-style: none;
-    width: 100%;
+	display: flex;
+	font-family: 'Titillium Web', 'Montserrat', sans-serif;
+	list-style: none;
+	width: 100%;
 }
 
 header ul li {
-    margin: auto 1rem auto 3rem;
+	margin: auto 1rem auto 3rem;
 }
 
 header ul li:nth-child(2) {
-    margin-right: auto;
+	margin-right: auto;
 }
 
 header ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.25rem;
+	color: white;
+	text-decoration: none;
+	font-size: 1.25rem;
 }
 
 .shop-list-item a {
-    color: #ffffff;
-    font-weight: bold;
+	color: #ffffff;
+	font-weight: bold;
 }
 
 header img {
-    width: 70px;
-    height: auto;
-    margin: 0 .25rem 0 auto;
+	width: 70px;
+	height: auto;
+	margin: 0 0.25rem 0 auto;
 }
 
 main {
-    grid-area: main;
-    background: #9c1de7;
+	grid-area: main;
+	background: #9c1de7;
 }
 
 .headline-container {
-    display: flex;
-    margin: 1.25rem 4rem 1rem 4rem;
+	display: flex;
+	margin: 1.25rem 4rem 1rem 4rem;
 }
 
-
 .headline-container h1 {
-    color: #faee1c;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    margin: auto 0 0 0;
-    text-shadow: 0px 0px 10px rgb(94, 94, 94);
+	color: #faee1c;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 2rem;
+	margin: auto 0 0 0;
+	text-shadow: 0px 0px 10px rgb(94, 94, 94);
 }
 
 .maintext-container {
-    margin: 2rem 4rem 1rem 4rem;
-    padding-top: 3rem;
+	margin: 2rem 4rem 1rem 4rem;
+	padding-top: 3rem;
 }
 
 .maintext-container h1 {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
-    width: 14rem;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3rem;
+	width: 14rem;
 }
 
 .maintext-container p {
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    line-height: 2.25rem;
-    margin: 2rem 0 10% 0;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+	line-height: 2.25rem;
+	margin: 2rem 0 10% 0;
 }
 
 .image {
-    grid-area: image;
-    background: url(./images/donut1.jpg) no-repeat;
-    background-size: cover;
-    background-position: bottom;
+	grid-area: image;
+	background: url(./images/donut1.jpg) no-repeat;
+	background-size: cover;
+	background-position: bottom;
 }
 
 .extra {
-    grid-area: extra;
-    background: #671199;
+	grid-area: extra;
+	display: flex;
+	background: #671199;
+	cursor: pointer;
+	justify-content: center;
+	align-items: center;
 }
 
-.google-maps {
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    visibility: hidden;
+.extra .extra-text-container {
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	width: 100%;
 }
 
-.extra:hover + .google-maps {
-    opacity: 1;
-    visibility: visible;
+.extra .extra-text-container h1 {
+	color: white;
+	font-size: 2rem;
+	text-shadow: 1px 1px 10px rgb(59, 59, 59);
+}
+
+.extra .extra-text-container h1 span {
+	color: #faee1c;
+}
+
+.extra .extra-text-container .divider {
+	border-radius: 50%;
+	height: 2px;
+	width: 8rem;
+	background: rgba(0, 0, 0, 0.2);
+	margin: auto;
+}
+
+#googleMaps {
+	display: none;
 }
 
 footer {
-    grid-area: footer;
-    background: #1f1f1f;
-    color: white;
-    font-family: 'Titillium Web', 'Montserrat', sans-serif;
+	grid-area: footer;
+	background: #1f1f1f;
+	color: white;
+	font-family: 'Titillium Web', 'Montserrat', sans-serif;
 }
 
 .footer-contact-container {
-    display: flex;
-    align-items: center;
-    margin-top: .75rem;
-    padding: 1rem 0 .5rem 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1.2rem;
 }
 
 .footer-contact-text-container {
-    margin: -.5rem auto 0 4rem;
-    line-height: 1.25rem;
+	margin-left: 1.5em;
+	line-height: 1.25rem;
 }
 
 .footer-contact-text-container h3 {
-    text-align: center;
+	text-align: center;
 }
 
-.footer-contact-container a {
-    margin-right: 2rem;
+.footer-contact-image-container {
+	margin-top: 0.25rem;
 }
 
-.footer-contact-container a:last-child {
-    margin-right: 4rem;
+.footer-contact-image-container a {
+	margin-right: 2rem;
 }
 
-.footer-contact-container a img {
-    width: 40px;
-    height: auto;
+.footer-contact-image-container a:last-child {
+	margin-right: 1.5rem;
 }
 
-.footer-copyright-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.footer-contact-image-container a img {
+	width: 40px;
+	height: auto;
 }
 
-.footer-copyright-container .divider {
-    height: .05rem;
-    width: 8rem;
-    background: white;
+/* About page styles:  */
+
+.grid-container-2 {
+	display: none;
+	opacity: 0;
+	grid-template-columns: 1.75fr 1fr;
+	grid-template-rows: 1fr 9fr 1fr;
+	grid-template-areas:
+		'main header'
+		'main image'
+		'footer image';
+	height: 100vh;
+
+	transition: opacity 0.5s linear;
 }
 
-.footer-copyright-container p {
-    text-align: center;
+.maintext-container h1 {
+	font-size: 4rem;
+	width: 100%;
+}
+
+.maintext-container p {
+	font-size: 2rem;
+	line-height: 2.6rem;
+}
+
+@media only screen and (max-width: 1505px) {
+	.maintext-container h1 {
+		font-size: 3.5rem;
+		width: 100%;
+	}
+
+	.maintext-container p {
+		font-size: 1.75rem;
+		line-height: 2.5rem;
+	}
+}
+
+@media only screen and (max-width: 1155px) {
+	.maintext-container h1 {
+		font-size: 3rem;
+		width: 100%;
+	}
+
+	.maintext-container p {
+		font-size: 1.5rem;
+		line-height: 2.25rem;
+	}
+}
+
+@media only screen and (max-width: 1010px) {
+	.maintext-container h1 {
+		font-size: 3rem;
+		width: 100%;
+	}
+
+	.maintext-container p {
+		font-size: 1.25rem;
+		line-height: 2rem;
+	}
+}
+
+.image2 {
+	grid-area: image;
+	background: url(./images/donut2.jpg) no-repeat;
+	background-size: cover;
+	background-position: center bottom;
 }
